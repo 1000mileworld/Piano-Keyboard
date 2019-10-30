@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Play with an electronic piano keyboard made with Javascript. Dynamically generated audio creates a realistic playing experience."/>
+  <meta name="author" content="Joe Liang" />
+  
+    <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:description" content="Play with an electronic piano keyboard made with Javascript. Dynamically generated audio creates a realistic playing experience." />
+  <meta name="twitter:title" content="Javascript Piano Keyboard" />
+  <meta name="twitter:image" content="https://i1.wp.com/1000mileworld.com/wp-content/uploads/2019/09/twitterCard-piano.jpg" />
+  
+  <title>Javascript Piano Keyboard</title>
+  
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140400287-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140400287-1');
+</script>
+
+  <style>
+
+  	body { font-family: Georgia; text-align: center;}
+
+	.banner {width: 1200px; height: 340px; object-fit: cover; object-position: 0px -90px;}	
+
+  	.title { color: #F50890; font-size: 40px; text-shadow: 0px -1px 5px #F5F408;}
+
+  	.content {background-color: #FAD7A0; margin: 20px; padding: 30px; border-style: double; border-width: 5px; font-size: 18px; text-align: left; width: 1200px; display: inline-block; }
+
+	.key { position: absolute; font-family: Helvetica; font-weight: 100; font-size: 12px;
+		border: 1px solid rgba(32,32,32,0.2);
+		border-radius: 0px 0px 5px 5px;
+		cursor:pointer;
+		box-shadow: 0px 5px 1px rgba(32,32,32,0.2);
+		-webkit-transition: margin 0.05s ease, background-color 0.05s ease, box-shadow 0.05s ease; }
+	.key:hover { background-color: #71DB90; }
+		
+	.key .label { position: absolute; bottom: 15px; text-align: center; left: 0px; right: 0px; }
+
+	.keyLabel {font-weight: 900; text-shadow: 0px -1px 5px #EBF508; font-size: 15px;}
+
+	.black { background-color: rgb(32,32,32); color: #ffffff; z-index: 1; text-shadow: 0px -1px 1px #FF0000; }
+	
+	.white { background-color: #F2F2DE; color: #3008F5; z-index: 0; text-shadow: 0px 1px 1px #08E8F5; }
+	
+	.keyboard-holder { margin: 30px auto; height: 200px; position:relative; user-select:none; -webkit-user-select:none;-moz-user-select:none;-o-user-select:none; }
+
+	/*.playing {background-color: #1BC0EA;}*/
+
+</style>
+
+<script src="audiosynth.js"></script>
+<script src="playKeyboard.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+<script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us20.list-manage.com","uuid":"dbcd725d81fa004cc7aa6230a","lid":"673d85a600","uniqueMethods":true}) })</script>
+
+<a href="https://1000mileworld.com/"><img class="banner" src="https://1000mileworld.com/wp-content/uploads/2019/09/100020Mile20world.jpg"></a>
+
+<h1 class="title">Javascript Piano Keyboard</h1>
+<h2><a href="https://1000mileworld.com/about/#author">Joe Liang</a></h2>
+
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Try out this electronic piano keyboard made in Javascript!" data-show-count="false">Share</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a href="https://twitter.com/1000mileworld?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @1000mileworld</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<div ID="keyboard" class="keyboard-holder"></div> <!--calls js to create keyboard with id-->
+
+<script type="text/javascript">playKeyboard()</script>
+
+<div class="content">
+<p>I made this piano keyboard in Javascript based on the <a href="https://keithwhor.com/music/">dynamically generated synthetic keyboard</a> made by Keith William Horwood. I extended the number of keys available to 4 octaves, set new key bindings, and applied some stylistic changes. To keep things simple, I removed the option of switching to different instrument sounds and just kept piano.</p>
+
+<p>What makes this keyboard interesting is the fact that Javascript dynamically generates the appropriate sound when the user presses a key and the code does not load any external audio files.</p>
+</div>
+
+<br>
+<a href="https://1000mileworld.com/neve-blog/">Blog</a> | <a href="https://1000mileworld.com/portfolio/">List of Projects</a>
+
+</body>
+</html>
